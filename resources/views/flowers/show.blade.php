@@ -26,9 +26,15 @@
     </div>
     <br>
 
-    <form action="{{ route('flowers.destroy', $flower->id) }}" method="POST">
-        @csrf
-        @method('DELETE')
-        <button type="submit" class="btn my-4 btn-danger">Delete Flower User</button>
-    </form>
+    <div class="flex flex-col gap-6 mt-8">
+        <form action="{{ route('flowers.destroy', $flower->id) }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger px-6 py-2.5 text-base font-medium inline-block">Delete Flower</button>
+        </form>
+    </div>
+    <div class="flex justify-start">
+        <a href="/flowers/{{ $flower->id }}/edit" class="btn btn-primary px-6 py-2.5 text-base font-medium inline-block">Edit Flower</a>
+    </div>
 </x-layout>
+

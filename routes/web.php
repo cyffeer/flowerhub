@@ -16,3 +16,7 @@ Route::get('/flowers/{flower}', [FlowerController::class, 'show'])->name('flower
 Route::post('/flowers', [FlowerController::class, 'store'])->name('flowers.store');
 
 Route::delete('/flowers/{flower}', [FlowerController::class, 'destroy'])->name('flowers.destroy');
+
+Route::put('/flowers/{flower}', [FlowerController::class, 'update'])->name('flowers.update');
+
+Route::get('/flowers/{flower}/edit', [FlowerController::class, 'edit'])->name('flowers.edit');
